@@ -26,21 +26,11 @@ RUN pip3 install influxdb-client
 #RUN unzip files.zip
 
 # Copy data for add-on
-#COPY grott.py /app/grott.py
-#COPY grottconf.py /app/grottconf.py
-#COPY grottdata.py /app/grottdata.py
-#COPY grottproxy.py /app/grottproxy.py
-#COPY grottsniffer.py /app/grottsniffer.py
-
 COPY script.sh /app/script.sh
 WORKDIR /app
 RUN curl -k https://codeload.github.com/johanmeijer/grott/zip/master --output files.zip && unzip files.zip
-#RUN unzip files.zip
-#COPY grott-master/grott.py /app/grott.py
-#COPY grott-master/grottconf.py /app/grottconf.py
-#COPY grott-master/grottdata.py /app/grottdata.py
-#COPY grott-master/grottproxy.py /app/grottproxy.py
-#COPY grott-master/grottsniffer.py /app/grottsniffer.py
+RUN rm files.zip
+RUM rm grott-master/docker/*
 
 RUN chmod a+x script.sh
 CMD [ "./script.sh" ]
