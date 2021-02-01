@@ -28,8 +28,7 @@ RUN pip3 install influxdb-client
 # Copy data for add-on
 COPY script.sh /app/script.sh
 WORKDIR /app
-RUN curl -k https://codeload.github.com/johanmeijer/grott/zip/master --output files.zip && unzip files.zip
-RUN rm files.zip
+RUN curl -k https://codeload.github.com/johanmeijer/grott/zip/master --output files.zip && unzip files.zip && rm files.zip
 RUN rm grott-master/docker/*
 
 RUN chmod a+x script.sh
