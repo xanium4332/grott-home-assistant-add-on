@@ -1,3 +1,5 @@
+#!/usr/bin/with-contenv bashio
+
 if  bashio::config.has_value 'gverbose'; then export gverbose="$(bashio::config 'gverbose')"; fi
 if  bashio::config.has_value 'gminrecl'; then export gminrecl="$(bashio::config 'gminrecl')"; fi 
 if  bashio::config.has_value 'gmode'; then export gmode="$(bashio::config 'gmode')"; fi
@@ -36,3 +38,5 @@ if  bashio::config.has_value 'giftoken'; then export giftoken="$(bashio::config 
 if  bashio::config.has_value 'gextension'; then export gextension="$(bashio::config 'gextension')"; fi
 if  bashio::config.has_value 'gextname'; then export gextname="$(bashio::config 'gextname')"; fi
 if  bashio::config.has_value 'gextvar'; then export gextvar="$(bashio::config 'gextvar')"; fi
+
+python -u grott.py -v
