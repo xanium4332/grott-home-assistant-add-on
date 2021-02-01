@@ -1,19 +1,42 @@
 #!/usr/bin/with-contenv bashio
 
+export gverbose="$(bashio::config 'gverbose')"
+export gminrecl="$(bashio::config 'gminrecl')" 
+export gmode="$(bashio::config 'gmode')"
+export ggrottip="$(bashio::config 'ggrottip')"
+export ggrottport="$(bashio::config 'ggrottport')"
+export gblockcmd="$(bashio::config 'gblockcmd')"
+export gnoipf="$(bashio::config 'gnoipf')"
+export gtime="$(bashio::config 'gtime')"
+export gsendbuf="$(bashio::config 'gsendbuf')"
+export gcompat="$(bashio::config 'gcompat')"
+export gvalueoffset="$(bashio::config 'gvalueoffset')"
+export ginverterid="$(bashio::config 'ginverterid')"
+export gdecrypt="$(bashio::config 'gdecrypt')"
+export ggrowattip="$(bashio::config 'ggrowattip')"
+export ggrowattport="$(bashio::config 'ggrowattport')"
 export gnomqtt="$(bashio::config 'gnomqtt')"
 export gmqttip="$(bashio::config 'gmqttip')"
 export gmqttport="$(bashio::config 'gmqttport')"
-export gmqttauth="$(bashio::config 'gmqttauth')"
 export gmqtttopic="$(bashio::config 'gmqtttopic')"
+export gmqttauth="$(bashio::config 'gmqttauth')"
 export gmqttuser="$(bashio::config 'gmqttuser')"
 export gmqttpassword="$(bashio::config 'gmqttpassword')"
-
-echo ${gnomqtt}
-echo ${gmqttip}
-echo ${gmqttport}
-echo ${gmqttauth}
-echo ${gmqtttopic}
-echo ${gmqttuser}
-echo ${gmqttpassword}
+export gpvoutput="$(bashio::config 'gpvoutput')"
+export gpvapikey="$(bashio::config 'gpvapikey')"
+export gpvsystemid="$(bashio::config 'gpvsystemid')"
+export ginflux="$(bashio::config 'ginflux')"
+export ginflux2="$(bashio::config 'ginflux2')"
+export gifdbname="$(bashio::config 'gifdbname')"
+export gifip="$(bashio::config 'gifip')"
+export gifport="$(bashio::config 'gifport')"
+export gifuser="$(bashio::config 'gifuser')"
+export gifpassword="$(bashio::config 'gifpassword')"
+export giforg="$(bashio::config 'giforg')"
+export gifbucket="$(bashio::config 'gifbucket')"
+export giftoken="$(bashio::config 'giftoken')"
+export gextension="$(bashio::config 'gextension')"
+export gextname="$(bashio::config 'gextname')"
+export gextvar="$(bashio::config 'gextvar')"
 
 python -u grott.py -v
