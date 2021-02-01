@@ -16,4 +16,4 @@ echo ${gmqtttopic}
 echo ${gmqttuser}
 echo ${gmqttpassword}
 
-python -u grott-master/grott.py -v
+python -u grott.py -v
