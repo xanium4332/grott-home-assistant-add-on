@@ -1,4 +1,4 @@
-# Grott
+# Home Assistant Grott
 ## The Growatt inverter monitor 
 
 The growatt inverter sends log data to the growatt website at the internet. At this website (or with the mobile app) you can see detailed information on how the inverter is performing. 
