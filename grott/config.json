@@ -3,6 +3,7 @@
   "version": "0.1",
   "slug": "grott",
   "description": "The Growatt inverter monitor",
+  "url": "https://github.com/johanmeijer/grott",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "startup": "application",
   "boot": "auto",
