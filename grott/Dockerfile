@@ -30,7 +30,7 @@ COPY script.sh /app/script.sh
 WORKDIR /app
 RUN curl -k https://codeload.github.com/johanmeijer/grott/zip/master --output files.zip && unzip files.zip
 RUN rm files.zip
-RUM rm grott-master/docker/*
+RUN rm grott-master/docker/*
 
 RUN chmod a+x script.sh
 CMD [ "./script.sh" ]
