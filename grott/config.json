@@ -38,7 +38,7 @@
 	"ggrowattport": "port?",
 	"gnomqtt": "bool?",
 	"gmqttip": "str?",
-	"gmqttport": "str?",
+	"gmqttport": "port?",
 	"gmqtttopic": "str?",
 	"gmqttauth": "bool?",
 	"gmqttuser": "str?",
