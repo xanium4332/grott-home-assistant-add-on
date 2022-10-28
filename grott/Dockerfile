@@ -15,12 +15,6 @@ RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
 RUN python3 -m ensurepip
 RUN pip3 install --no-cache --upgrade pip setuptools
 
-#Install required python packages 
-RUN pip3 install paho-mqtt
-RUN pip3 install requests 
-RUN pip3 install influxdb
-RUN pip3 install influxdb-client 
-
 
 #RUN curl -k https://codeload.github.com/johanmeijer/grott/zip/master --output files.zip && unzip files.zip
 #RUN unzip files.zip
@@ -28,7 +22,11 @@ RUN pip3 install influxdb-client
 # Copy data for add-on
 COPY script.sh /app/script.sh
 WORKDIR /app
-RUN curl -k https://codeload.github.com/johanmeijer/grott/zip/master --output files.zip && unzip files.zip && rm files.zip && mv grott-master/*.py ./ && rm grott-master/* -rf && rmdir grott-master
+RUN curl -Lk https://github.com/egguy/grott/archive/refs/heads/feature/docker-build.zip --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./ && mv grott-*/requirements.txt ./ rm grott-*/ -rf
+
+#Install required python packages 
+RUN pip3 install -r requirements.txt
+
 
 RUN chmod a+x script.sh
 CMD [ "./script.sh" ]
