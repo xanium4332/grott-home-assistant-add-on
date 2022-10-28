@@ -1,7 +1,7 @@
 {
   "name": "Grott server",
   "version": "2.7.6",
-  "slug": "grott",
+  "slug": "grottserver",
   "description": "The Growatt inverter monitor",
   "url": "https://github.com/johanmeijer/grott",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
