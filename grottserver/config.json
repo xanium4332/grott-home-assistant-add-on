@@ -1,5 +1,5 @@
 {
-  "name": "Grott",
+  "name": "Grott server",
   "version": "2.7.6",
   "slug": "grott",
   "description": "The Growatt inverter monitor",
@@ -9,7 +9,8 @@
   "init": false,  
   "boot": "auto",
   "ports" :{
-	"5279/tcp": 5279
+	"5781/tcp": 5781,
+	"5782/tcp": 5782
   },
   "options": {
 	"gmode": "proxy",

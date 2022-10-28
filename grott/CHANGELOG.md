@@ -3,4 +3,4 @@
 ## 0.1
 
 - Initial version
-- Based on grott v2.3.1
+- Based on grott v2.7.6
