@@ -39,8 +39,9 @@ if  bashio::config.has_value 'gifpassword'; then export gifpassword="$(bashio::c
 if  bashio::config.has_value 'giforg'; then export giforg="$(bashio::config 'giforg')"; fi
 if  bashio::config.has_value 'gifbucket'; then export gifbucket="$(bashio::config 'gifbucket')"; fi
 if  bashio::config.has_value 'giftoken'; then export giftoken="$(bashio::config 'giftoken')"; fi
-if  bashio::config.has_value 'gextension'; then export gextension="$(bashio::config 'gextension')"; fi
-if  bashio::config.has_value 'gextname'; then export gextname="$(bashio::config 'gextname')"; fi
-if  bashio::config.has_value 'gextvar'; then export gextvar="$(bashio::config 'gextvar')"; fi
+
+export gextension="True"
+export gextname="grott_ha"
+export gextvar="{\"ha_mqtt_host\": \"$(bashio::services mqtt "host")\", \"ha_mqtt_port\": \"$(bashio::services mqtt "port")\", \"ha_mqtt_user\": \"$(bashio::services mqtt "username")\", \"ha_mqtt_password\": \"$(bashio::services mqtt "password")\"}"
 
 python -u grott.py -v

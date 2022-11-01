@@ -22,10 +22,11 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 # Copy data for add-on
 COPY script.sh /app/script.sh
 WORKDIR /app
-RUN curl -Lk https://github.com/egguy/grott/archive/refs/heads/feature/docker-build.zip --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./ && mv grott-*/requirements.txt ./ && rm grott-*/ -rf
+RUN curl -Lk 'https://github.com/johanmeijer/grott/archive/refs/heads/2.7-(Beta).zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
+RUN curl -L "https://raw.githubusercontent.com/egguy/grott/feature/ha-extension/examples/Home%20Assistent/grott_ha.py" -o grott_ha.py
 
 #Install required python packages 
-RUN pip3 install -r requirements.txt
+RUN pip install paho-mqtt requests influxdb influxdb
 
 
 RUN chmod a+x script.sh
