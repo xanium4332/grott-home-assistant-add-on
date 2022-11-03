@@ -20,7 +20,6 @@
 	"ports": {
 		"5279/tcp": 5279
 	},
-	"watchdog": "tcp://[HOST]:[PORT:5279]",
 	"options": {
 		"gmode": "proxy",
 		"gnomqtt": "False",
