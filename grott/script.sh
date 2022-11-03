@@ -39,6 +39,8 @@ if  bashio::config.has_value 'gifpassword'; then export gifpassword="$(bashio::c
 if  bashio::config.has_value 'giforg'; then export giforg="$(bashio::config 'giforg')"; fi
 if  bashio::config.has_value 'gifbucket'; then export gifbucket="$(bashio::config 'gifbucket')"; fi
 if  bashio::config.has_value 'giftoken'; then export giftoken="$(bashio::config 'giftoken')"; fi
+if  bashio::config.has_value 'ginvtypemap'; then export ginvtypemap="$(bashio::config 'ginvtypemap')"; fi
+
 
 export gextension="True"
 export gextname="grott_ha"
