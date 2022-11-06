@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3
+
+- Add translations
+- Moved the ginvtypemap to the top configuration
+
+## 0.2
+
+- Based on grott v2.7.7
+- use the current  grott_ha.py plugins
+- Auto configuration for the MQTT part
+
 ## 0.1
 
 - Initial version
