@@ -18,6 +18,7 @@ The add-on has a couple of options available. To get the add-on running:
 
 ## Add-on configuration:
 All options from grott are available as options in this add-on. They need to follow the naming convention of the environment variables. Eg:  
+
 ```yaml
 	gmode: proxy
 	gnomqtt: False
