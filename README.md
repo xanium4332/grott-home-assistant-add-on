@@ -12,3 +12,4 @@ Thanks for all the contributors:
 
 - [alelio](https://github.com/alelio)
 - [perico85](https://github.com/perico85)
+- [crazymonster999](https://github.com/crazymonster999) - Alpha tester
