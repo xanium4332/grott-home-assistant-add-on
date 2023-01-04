@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5
+
+- Change to use pip3 with the newest addon image.
+
 ## 0.3
 
 - Add translations
