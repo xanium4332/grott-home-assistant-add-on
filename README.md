@@ -10,5 +10,5 @@ This allow to process in local all the data from the growatt shineX key and don'
 
 Thanks for all the contributors:
 
-[![](https://github.com/alelio.png?size=50)](https://github.com/alelio)
-[![](https://github.com/perico85.png?size=50)](https://github.com/perico85)
+- [alelio](https://github.com/alelio)
+- [perico85](https://github.com/perico85)
