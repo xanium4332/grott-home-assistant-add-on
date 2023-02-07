@@ -1,22 +1,8 @@
-name: "Test"
+name: "Build edge"
 
 on: [push, pull_request]
 
 jobs:
-  test:
-    name: Test build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
-      - name: Test build current
-        uses: home-assistant/builder@master
-        with:
-          args: |
-            --test \
-            --all \
-            --target grott-current \
-            --docker-hub egguy
   publish:
     needs: test
     name: Publish
@@ -35,4 +21,4 @@ jobs:
           args: |
             --all \
             --target grott-current \
-            --docker-hub user-name-or-space-name
+            --docker-hub ${{ secrets.DOCKERHUB_USERNAME }}
