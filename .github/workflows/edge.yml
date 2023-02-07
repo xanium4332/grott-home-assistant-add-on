@@ -4,7 +4,6 @@ on: [push, pull_request]
 
 jobs:
   publish:
-    needs: test
     name: Publish
     runs-on: ubuntu-latest
     steps:
