@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6
+
+- Updated the branch used by grott
+
 ## 0.5
 
 - Change to use pip3 with the newest addon image.

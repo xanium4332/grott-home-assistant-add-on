@@ -22,7 +22,7 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 # Copy data for add-on
 COPY script.sh /app/script.sh
 WORKDIR /app
-RUN curl -Lk 'https://github.com/johanmeijer/grott/archive/refs/heads/Master-(2.7.8).zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
+RUN curl -Lk 'https://github.com/johanmeijer/grott/archive/refs/heads/master.zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
 # Move the addon
 RUN mv grott-*/examples/Home\ Assistent/grott_ha.py ./
 
