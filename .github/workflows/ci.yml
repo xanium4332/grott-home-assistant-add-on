@@ -72,7 +72,7 @@ jobs:
 
     steps:
     - name: Checkout code
-    - uses: actions/checkout@v3   
+      uses: actions/checkout@v3   
       
     - name: Update package.json version  
       uses: jossef/action-set-json-field@v2.1
