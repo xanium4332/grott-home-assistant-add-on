@@ -1,6 +1,6 @@
 {
   "name": "Grott - HA extension - current",
-  "version": "edge-4254195578",
+  "version": "edge-4254266279",
   "slug": "grott-current",
   "description": "The Growatt inverter monitor - current HA plugin",
   "url": "https://github.com/egguy/grott-home-assistant-add-on/tree/main/grott-current",
