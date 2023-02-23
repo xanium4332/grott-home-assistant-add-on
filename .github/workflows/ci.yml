@@ -85,6 +85,7 @@ jobs:
       with:
         default_author: github_actions
         message: 'edge: bumping release edge-${{ github.run_id }}'
+        pull: '--rebase --autostash'
 
         
     - name: Push changes
