@@ -29,7 +29,7 @@ jobs:
       if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.type == 'edge'))
       run: |
         echo "ADDON_LIST=['grott-current']" >> $GITHUB_ENV
-        echo "DOCKER_ARGS=--no-cache" >> $GITHUB_ENV
+        echo "DOCKER_ARGS=--no-cache -v edge-${{ github.run_id }}" >> $GITHUB_ENV
     - name: "ARGS: grott" # Build of addon release version
       if: startsWith(github.ref, 'refs/tags/') && github.event_name == 'push'
       run: |
@@ -81,11 +81,11 @@ jobs:
         field: version
         value: "edge-${{ github.run_id }}"
     - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add -A
-        git commit -m "edge: bumping release edge-${{ github.run_id }}"
+      uses: EndBug/add-and-commit@v9
+      with:
+        default_author: github_actions
+        message: 'edge: bumping release edge-${{ github.run_id }}'
+
         
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
