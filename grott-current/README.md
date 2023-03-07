@@ -1,4 +1,4 @@
-# The Growatt Inverter Monitor - HA addon
+# Grott - Home Assistant native MQTT integration
 
 This addon allow you to run a local version of grott with the HA plugin and auto discovery enabled.
 

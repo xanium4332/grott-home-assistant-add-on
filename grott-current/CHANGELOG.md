@@ -1,5 +1,15 @@
 # Changelog
 
+
+## 0.7
+
+- Add new options for configuration
+  - Verbose mode
+  - MQTT retain
+  - data path, now you can edit your configuration in /config/grott/grott.ini
+  - Allow custom MQTT broker
+
+
 ## 0.6
 
 - Updated the branch used by grott

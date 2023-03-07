@@ -1,8 +1,11 @@
 ---
 configuration:
-  gverbose:
+  verbose:
     name: Verbose mode
     description: Enable the verbose mode. Useful for debugging
+  retain:
+    name: Activate MQTT retain
+    description: This allow to keep the values between reboot, prevent showing sensor values as unknown
   gminrecl:
     name: Minimum record length
     description: The minimum packet length to be treated
