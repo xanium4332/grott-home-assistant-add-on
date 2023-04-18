@@ -23,7 +23,7 @@ This addon allow you to have all the entities automatically created.
         ```yaml
         host: <IP>
         port: 1883
-        user: my_user
+        username: my_user
         password: my_password
         ```
 
