@@ -24,7 +24,7 @@ COPY script.sh /app/script.sh
 WORKDIR /app
 RUN curl -Lk 'https://github.com/johanmeijer/grott/archive/refs/heads/Beta-(2.8.x).zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
 # Move the addon
-RUN curl -L 'https://raw.githubusercontent.com/egguy/grott/feature/ha-extension/examples/Home%20Assistent/grott_ha.py' -o grott_ha.py
+RUN curl -L 'https://raw.githubusercontent.com/xanium4332/grott/feature/ha-extension/examples/Home%20Assistent/grott_ha.py' -o grott_ha.py
 
 #Install required python packages 
 RUN pip3 install paho-mqtt requests influxdb influxdb
@@ -49,10 +49,10 @@ LABEL \
     io.hass.arch="${BUILD_ARCH}" \
     io.hass.type="addon" \
     io.hass.version=${BUILD_VERSION} \
-    maintainer="egguy <crazypops@gmail.com>" \
+    maintainer="xanium4332 <xanium4332@example.com>" \
     org.opencontainers.image.title="${BUILD_NAME}" \
     org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
-    org.opencontainers.image.authors="egguy <crazypops@gmail.com>" \
+    org.opencontainers.image.authors="xanium4332 <xanium4332@example.com>" \
     org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
     org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \

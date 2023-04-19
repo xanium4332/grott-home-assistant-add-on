@@ -79,5 +79,5 @@
 			"password": "str?"
 		}
 	},
-	"image": "egguy/addon-{arch}-grott-ha-addon"
+	"image": "xanium4332/addon-{arch}-grott-ha-addon"
 }
