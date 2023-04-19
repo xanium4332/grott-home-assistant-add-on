@@ -24,7 +24,7 @@ COPY script.sh /app/script.sh
 WORKDIR /app
 RUN curl -Lk 'https://github.com/johanmeijer/grott/archive/refs/heads/Beta-(2.8.x).zip' --output files.zip && unzip -o files.zip && rm files.zip && mv grott-*/*.py ./
 # Move the addon
-RUN curl -L 'https://raw.githubusercontent.com/xanium4332/grott/feature/ha-extension/examples/Home%20Assistent/grott_ha.py' -o grott_ha.py
+RUN curl -L 'https://raw.githubusercontent.com/egguy/grott/feature/ha-extension/examples/Home%20Assistent/grott_ha.py' -o grott_ha.py
 
 #Install required python packages 
 RUN pip3 install paho-mqtt requests influxdb influxdb
